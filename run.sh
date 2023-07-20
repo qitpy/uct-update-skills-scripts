@@ -6,14 +6,14 @@ read -p "Enter the value for SCRIPT_DATABASE_URI: " database_uri
 # Check if the entered value is empty
 while [[ -z "$database_uri" ]]; do
     echo "Error: The value cannot be empty."
-    read -p "Enter the value for SCRIPT_DATABASE_URI: " database_uri
+    read -p "Enter the value for SCRIPT_DATABASE_URI (ex: mongodb://localhost:27017): " database_uri
 done
 
 # Set the environment variable SCRIPT_DATABASE_URI
 export SCRIPT_DATABASE_URI="$database_uri"
 
 # Prompt the user to set the value for SCRIPT_DATABASE_DBNAME
-read -p "Enter the value for SCRIPT_DATABASE_DBNAME: " database_dbname
+read -p "Enter the value for SCRIPT_DATABASE_DBNAME (ex: uct-crawling-dev): " database_dbname
 
 # Check if the entered value is empty
 while [[ -z "$database_dbname" ]]; do
