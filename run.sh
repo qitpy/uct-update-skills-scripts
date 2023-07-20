@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Prompt the user to set the value for SCRIPT_DATABASE_URI
-read -p "Enter the value for SCRIPT_DATABASE_URI: " database_uri
+read -p "Enter the value for SCRIPT_DATABASE_URI (ex: mongodb://localhost:27017): " database_uri
 
 # Check if the entered value is empty
 while [[ -z "$database_uri" ]]; do
@@ -18,7 +18,7 @@ read -p "Enter the value for SCRIPT_DATABASE_DBNAME (ex: uct-crawling-dev): " da
 # Check if the entered value is empty
 while [[ -z "$database_dbname" ]]; do
     echo "Error: The value cannot be empty."
-    read -p "Enter the value for SCRIPT_DATABASE_DBNAME: " database_dbname
+    read -p "Enter the value for SCRIPT_DATABASE_DBNAME (ex: uct-crawling-dev): " database_dbname
 done
 
 # Set the environment variable ENV_VAR2
